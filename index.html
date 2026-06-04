@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarvesh Karandikar</title>
+  <meta name="description" content="Sarvesh Karandikar — Senior Software Engineer. Building things." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <meta name="theme-color" content="#070710" />
+  <meta property="og:title" content="Sarvesh Karandikar" />
+  <meta property="og:description" content="Senior Software Engineer — building things." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sarveshk.dev/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #070710;
+      --line: rgba(255,255,255,0.08);
+      --text: #f2f2fb;
+      --dim: #b2b2c8;
+      --dim2: #7c7c96;
+      --violet: #a78bfa;
+      --teal: #37f5c5;
+    }
+    html { height: 100%; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .glow {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(50% 40% at 50% 35%, rgba(124,92,255,0.22), transparent 65%),
+        radial-gradient(40% 35% at 60% 55%, rgba(46,230,210,0.10), transparent 65%);
+      animation: breathe 8s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+    main {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px 30px;
+    }
+    h1 {
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+    }
+    h1 .g {
+      background: linear-gradient(110deg, #a78bfa, #37f5c5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .tagline {
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: var(--dim);
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+    .links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .links a {
+      padding: 13px 28px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    .links .primary {
+      background: linear-gradient(110deg, #7c5cff, #5b8cff);
+      color: #fff;
+    }
+    .links .primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(124,92,255,0.4);
+    }
+    .links .secondary {
+      border: 1px solid rgba(255,255,255,0.16);
+      color: var(--text);
+      background: rgba(255,255,255,0.03);
+    }
+    .links .secondary:hover {
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.06);
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      color: var(--dim2);
+      margin-top: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <main>
+    <h1>Sarvesh <span class="g">Karandikar</span></h1>
+    <p class="tagline">Senior Software Engineer. Building things —<br>some are live, some are cooking.</p>
+    <div class="links">
+      <a href="https://resume.sarveshk.dev" class="primary">Résumé →</a>
+      <a href="https://github.com/sarvesh1karandikar" class="secondary" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/sarveshkarandikar/" class="secondary" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <p class="mono">sarveshk.dev</p>
+  </main>
+</body>
+</html>

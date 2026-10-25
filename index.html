@@ -1,137 +1,119 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sarvesh Karandikar</title>
-  <meta name="description" content="Sarvesh Karandikar — Senior Software Engineer. Building things." />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-  <meta name="theme-color" content="#070710" />
-  <meta property="og:title" content="Sarvesh Karandikar" />
-  <meta property="og:description" content="Senior Software Engineer — building things." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://sarveshk.dev/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --bg: #070710;
-      --line: rgba(255,255,255,0.08);
-      --text: #f2f2fb;
-      --dim: #b2b2c8;
-      --dim2: #7c7c96;
-      --violet: #a78bfa;
-      --teal: #37f5c5;
-    }
-    html { height: 100%; }
-    body {
-      font-family: 'Inter', system-ui, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      -webkit-font-smoothing: antialiased;
-      overflow: hidden;
-    }
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.04;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    }
-    .glow {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(50% 40% at 50% 35%, rgba(124,92,255,0.22), transparent 65%),
-        radial-gradient(40% 35% at 60% 55%, rgba(46,230,210,0.10), transparent 65%);
-      animation: breathe 8s ease-in-out infinite;
-    }
-    @keyframes breathe {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 1; }
-    }
-    main {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: 40px 30px;
-    }
-    h1 {
-      font-size: clamp(40px, 6vw, 72px);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      margin-bottom: 14px;
-    }
-    h1 .g {
-      background: linear-gradient(110deg, #a78bfa, #37f5c5);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    .tagline {
-      font-size: clamp(16px, 1.8vw, 20px);
-      color: var(--dim);
-      margin-bottom: 40px;
-      line-height: 1.5;
-    }
-    .links {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .links a {
-      padding: 13px 28px;
-      border-radius: 12px;
-      font-weight: 600;
-      font-size: 15px;
-      text-decoration: none;
-      transition: 0.2s;
-    }
-    .links .primary {
-      background: linear-gradient(110deg, #7c5cff, #5b8cff);
-      color: #fff;
-    }
-    .links .primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 28px rgba(124,92,255,0.4);
-    }
-    .links .secondary {
-      border: 1px solid rgba(255,255,255,0.16);
-      color: var(--text);
-      background: rgba(255,255,255,0.03);
-    }
-    .links .secondary:hover {
-      border-color: rgba(255,255,255,0.4);
-      background: rgba(255,255,255,0.06);
-    }
-    .mono {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 12px;
-      color: var(--dim2);
-      margin-top: 48px;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sarvesh Karandikar — AI Infrastructure Engineer</title>
+  <meta name="description" content="Sarvesh Karandikar, software engineer at Cisco. Selected work in AI agent runtimes, distributed orchestration, and network infrastructure.">
+  <meta name="theme-color" content="#0B0B0B">
+  <meta property="og:title" content="Sarvesh Karandikar — Engineering the systems behind AI">
+  <meta property="og:description" content="Agent runtimes, distributed systems, and the engineering behind reliable execution. Selected contributions and independent projects.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sarveshk.dev/">
+  <link rel="canonical" href="https://sarveshk.dev/">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./theme.css">
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="glow"></div>
-  <main>
-    <h1>Sarvesh <span class="g">Karandikar</span></h1>
-    <p class="tagline">Senior Software Engineer. Building things —<br>some are live, some are cooking.</p>
-    <div class="links">
-      <a href="https://resume.sarveshk.dev" class="primary">Résumé →</a>
-      <a href="https://github.com/sarvesh1karandikar" class="secondary" target="_blank" rel="noopener">GitHub</a>
-      <a href="https://www.linkedin.com/in/sarveshkarandikar/" class="secondary" target="_blank" rel="noopener">LinkedIn</a>
-    </div>
-    <p class="mono">sarveshk.dev</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#top" aria-label="Sarvesh Karandikar, back to top">Sarvesh Karandikar<span aria-hidden="true">.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#work">Work</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+      <a class="resume-link" href="https://resume.sarveshk.dev">Résumé <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main" class="wrap" tabindex="-1">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Software engineer / Cisco Systems</p>
+        <h1 id="hero-title">Engineering the<br class="desktop-break"> systems behind <em>AI.</em></h1>
+        <p class="hero-description">I build the infrastructure that connects AI agents to the systems they run on. My work spans agent runtimes, distributed orchestration, and cloud networking.</p>
+        <div class="hero-actions">
+          <a class="button" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="https://github.com/sarvesh1karandikar">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <figure class="hero-figure">
+        <div class="figure-label"><span>Fig. 01</span><span>Execution, in context</span></div>
+        <picture>
+          <source media="(max-width: 560px)" srcset="./assets/execution-model-mobile.svg" width="320" height="420">
+          <img src="./assets/execution-model.svg" width="520" height="420" alt="Conceptual model: an orchestrator coordinates an AgentCore runtime and sandbox, with Redis for session state and Temporal for workflow coordination. These are responsibilities, not an internal deployment diagram.">
+        </picture>
+        <figcaption>A simplified view of the problems I work on.<br>Conceptual model, not an internal deployment diagram.</figcaption>
+      </figure>
+      <div class="hero-footnote"><span class="eyebrow">Areas of focus</span><p>Agent execution <span aria-hidden="true">/</span> Distributed systems <span aria-hidden="true">/</span> Infrastructure</p></div>
+    </section>
+
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <header class="section-heading"><p class="eyebrow">01 / Selected work</p><h2 id="work-title">From networks to agent runtimes.</h2><p>Selected contributions at Cisco. The platform is a team effort; the work below describes my part in it.</p></header>
+      <article class="project featured" aria-labelledby="canvas-title">
+        <div class="project-margin"><p class="eyebrow">01 — AI Canvas</p><p class="margin-note">Agent infrastructure<br>Integration &amp; orchestration</p><span class="tag">Featured work</span></div>
+        <div class="project-body">
+          <h3 id="canvas-title">Giving agents a place to run.</h3>
+          <p class="project-lead">Connecting sandbox execution with the state and coordination it needs.</p>
+          <div class="project-overview"><div><h4>The problem</h4><p>Agent execution and session state span services. Managing the runtime also means managing concurrency, session lifecycles, and what happens when an orchestrator stops.</p></div><div><h4>My contribution</h4><p>I built the AgentCore management integration and a custom sandbox image, and worked on orchestration with Redis and Temporal, including concurrency and session management.</p></div></div>
+          <p class="stack">AgentCore <span>/</span> Redis <span>/</span> Temporal <span>/</span> Containers</p>
+          <details class="case-study">
+            <summary><span>Inside the engineering</span><span class="disclosure-icon" aria-hidden="true"></span></summary>
+            <div class="case-content">
+              <section><h4>The problem</h4><p>Moving toward sandbox-based execution introduces boundaries between orchestration, runtime management, and session state. Those boundaries need explicit coordination, particularly when multiple sessions or requests are active.</p></section>
+              <section><h4>My contribution</h4><ul><li>Built the AgentCore management integration.</li><li>Developed a custom sandbox image for isolated agent execution.</li><li>Worked on the orchestrator with Redis and Temporal, including distributed concurrency and session management.</li><li>Tested session behavior by terminating orchestrator pods during active queries.</li></ul></section>
+              <section><h4>Working with the team</h4><p>The wider AI Canvas platform and architecture were shared team work. My contribution focused on the integration, sandbox image, orchestration, and testing described here.</p></section>
+              <section><h4>Validation</h4><p>I used controlled pod termination during active queries to examine session continuity and routing across orchestrator instances. The focus was understanding behavior during disruption, alongside normal execution.</p></section>
+            </div>
+          </details>
+        </div>
+      </article>
+      <article class="project" aria-labelledby="nexus-title">
+        <div class="project-margin"><p class="eyebrow">02 — Nexus Dashboard</p><p class="margin-note">Network infrastructure<br>Platform engineering</p></div>
+        <div class="project-body"><h3 id="nexus-title">The infrastructure underneath.</h3><p class="project-lead">Infrastructure contributions supporting enterprise network operations.</p>
+          <div class="project-overview"><div><h4>The problem</h4><p>Network management platforms depend on coordinated infrastructure services, from certificates to active-standby processes.</p></div><div><h4>My contribution</h4><p>My Nexus Dashboard work included Kubernetes certificate management, external certificate-authority integration, and a Java leader-election framework.</p></div></div>
+          <p class="stack">Kubernetes <span>/</span> Java <span>/</span> PKI <span>/</span> Postgres</p>
+          <details class="case-study"><summary><span>Inside the engineering</span><span class="disclosure-icon" aria-hidden="true"></span></summary><div class="case-content">
+            <section><h4>The problem</h4><p>Infrastructure services need explicit coordination and certificate lifecycles within a larger network management platform.</p></section>
+            <section><h4>My contribution</h4><p>I worked on certificate management for Kubernetes communications and external-CA integration, and implemented an SPI-based Java leader-election framework for active-standby configurations.</p></section>
+            <section><h4>Working with the team</h4><p>These were contributions within the Nexus Dashboard team. The broader product and infrastructure were developed collectively.</p></section>
+            <section><h4>Validation focus</h4><p>The important behaviors here are certificate lifecycle, trust between services, and coordination during leadership changes.</p></section>
+          </div></details>
+        </div>
+      </article>
+      <article class="project" aria-labelledby="cloud-title">
+        <div class="project-margin"><p class="eyebrow">03 — Cloud APIC</p><p class="margin-note">Cloud Network Controller<br>Graph-based systems</p></div>
+        <div class="project-body"><h3 id="cloud-title">Making connections explicit.</h3><p class="project-lead">Working with graph-based representations of cloud networking.</p>
+          <div class="project-overview"><div><h4>The problem</h4><p>Cloud network configuration is relational: understanding a resource often requires understanding what it connects to.</p></div><div><h4>My contribution</h4><p>I worked on a Terraform collection service feeding a unified graph database within Cloud APIC / Cloud Network Controller.</p></div></div>
+          <p class="stack">Python <span>/</span> Terraform <span>/</span> Dgraph <span>/</span> Cloud networking</p>
+          <details class="case-study"><summary><span>Inside the engineering</span><span class="disclosure-icon" aria-hidden="true"></span></summary><div class="case-content">
+            <section><h4>The problem</h4><p>A network model needs to represent resources and their relationships across cloud environments.</p></section>
+            <section><h4>My contribution</h4><p>I built a Terraform collection service feeding a unified graph database, as part of my cloud networking work.</p></section>
+            <section><h4>Working with the team</h4><p>The collection service was one contribution to the broader Cloud Network Controller product. The overall architecture and product were team work.</p></section>
+            <section><h4>Validation focus</h4><p>The important relationship is between collected configuration and its graph representation: the resources, their connections, and how those connections can be inspected.</p></section>
+          </div></details>
+        </div>
+      </article>
+    </section>
+
+    <section class="section independent" aria-labelledby="independent-title">
+      <header class="section-heading compact"><p class="eyebrow">02 / Independent work</p><h2 id="independent-title">Things I build to explore.</h2><p>Personal projects, separate from my work at Cisco.</p></header>
+      <div class="independent-grid">
+        <article><p class="eyebrow">01 / Automation</p><h3><a href="https://github.com/sarvesh1karandikar/alpacabot-dashboard">AlpacaBot <span aria-hidden="true">↗</span></a></h3><p>A dashboard for a trading-agent project, exploring execution, monitoring, and control.</p><p class="stack">Python / AWS / Telegram</p></article>
+        <article><p class="eyebrow">02 / Integration</p><h3><a href="https://github.com/sarvesh1karandikar/DriveSuite">DriveSuite <span aria-hidden="true">↗</span></a></h3><p>A conversational bridge between WhatsApp and a home media stack, with local and hosted models.</p><p class="stack">Node.js / Docker / LLMs</p></article>
+        <article><p class="eyebrow">03 / Retrieval</p><h3><a href="https://github.com/sarvesh1karandikar/chromadb">ChromaDB RAG <span aria-hidden="true">↗</span></a></h3><p>Experiments in document ingestion, semantic retrieval, and collection routing.</p><p class="stack">FastAPI / ChromaDB / Python</p></article>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach" aria-labelledby="approach-title">
+      <div><p class="eyebrow">03 / Engineering approach</p><h2 id="approach-title">Plan for the<br>unhappy path.</h2><p class="approach-intro">I’m interested in the point where a system’s design meets its behavior: who owns the state, how work is coordinated, and what happens when a process goes away.</p></div>
+      <ol class="principles"><li><h3>Draw the boundaries.</h3><p>Keep runtime isolation and orchestration responsibilities explicit.</p></li><li><h3>Understand the state.</h3><p>Treat session lifecycle and concurrency as first-class design concerns.</p></li><li><h3>Test the interruption.</h3><p>Use controlled disruption to explore behavior beyond the happy path.</p></li></ol>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow">04 / Start a conversation</p><h2 id="contact-title">Let’s talk systems.</h2><p>Working on agent infrastructure or distributed execution?<br class="desktop-break"> I’d enjoy comparing notes.</p>
+      <a class="contact-email" href="mailto:sarvesh1karandikar@gmail.com">sarvesh1karandikar@gmail.com <span aria-hidden="true">↗</span></a>
+      <div class="contact-links"><a href="https://github.com/sarvesh1karandikar">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/sarveshkarandikar/">LinkedIn <span aria-hidden="true">↗</span></a><a href="https://resume.sarveshk.dev">Résumé <span aria-hidden="true">↗</span></a></div>
+    </section>
   </main>
+  <footer class="site-footer wrap"><p>© 2026 Sarvesh Karandikar</p><p>Built with care. Kept simple.</p><a href="#top">Back to top ↑</a></footer>
 </body>
 </html>

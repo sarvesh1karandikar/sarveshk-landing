@@ -1,0 +1,41 @@
+/* Engineering Journal theme v1.0.0
+ * Canonical source: sarveshk-landing/theme.css
+ * Copy this file unchanged to sarveshk-dev/public/theme.css.
+ * Both sites serve their own version; no cross-site runtime dependency.
+ */
+:root {
+  color-scheme: dark;
+  --bg: #0b0b0b;
+  --text: #f5f2eb;
+  --secondary: #c9c6bf;
+  --line: #494845;
+  --quiet-line: #2e2e2b;
+  --serif: Georgia, 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  --mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: 32px; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 18px/1.6 var(--sans); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--text); color: var(--bg); }
+a { color: inherit; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--text); outline-offset: 6px; }
+main:focus { outline: none; }
+p, h1, h2, h3, h4, figure { margin: 0; }
+p { color: var(--secondary); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.08; text-wrap: balance; }
+h4 { font: 600 18px/1.5 var(--sans); margin-bottom: 10px; }
+img { display: block; max-width: 100%; height: auto; }
+.wrap { width: min(1200px, calc(100% - 96px)); margin-inline: auto; }
+.eyebrow, .stack, .tag, .figure-label, figcaption, .site-footer { font-family: var(--mono); }
+.eyebrow { font-size: 12px; line-height: 1.8; letter-spacing: .13em; text-transform: uppercase; color: var(--secondary); }
+.skip-link { position: absolute; top: 12px; left: 24px; padding: 12px 20px; background: var(--text); color: var(--bg); z-index: 10; transform: translateY(-160%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 28px; border-bottom: 1px solid var(--line); }
+.wordmark { font: 700 24px/1.2 var(--serif); text-decoration: none; padding-block: 8px; }
+.wordmark span { padding-left: 1px; }
+nav { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 28px; }
+nav a { display: inline-flex; align-items: center; min-height: 44px; font: 12px/1.5 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+nav .resume-link { border: 1px solid var(--line); padding: 10px 17px; gap: 15px; text-decoration: none; }
+nav .resume-link:hover { background: var(--text); color: var(--bg); }

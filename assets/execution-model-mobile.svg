@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="420" viewBox="0 0 320 420" fill="none">
+  <title>Execution, in context — mobile</title>
+  <desc>A conceptual orchestrator connects to Redis session state, Temporal workflow coordination, and an AgentCore runtime containing a sandbox image.</desc>
+  <defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" stroke="#262624" stroke-width=".6"/></pattern><marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="m1 1 5 2.5L1 6" stroke="#c9c6bf"/></marker></defs>
+  <path fill="url(#grid)" d="M0 0h320v420H0z"/>
+  <g stroke="#aaa79f"><path d="M160 95v160" marker-end="url(#arrow)"/><path d="M100 95v31H75v29m145-60v31h25v29" stroke-dasharray="4 5" marker-end="url(#arrow)"/></g>
+  <g fill="#0b0b0b" stroke="#c9c6bf"><path d="M55 32h210v63H55zM10 157h130v67H10zM180 157h130v67H180z"/><path d="M35 258h250v117H35z" stroke-dasharray="4 5"/><path d="M58 318h204v36H58z"/></g>
+  <g fill="#f5f2eb" font-family="Arial, sans-serif" font-size="18" text-anchor="middle"><text x="160" y="70">Orchestrator</text><text x="75" y="184">Redis</text><text x="245" y="184">Temporal</text><text x="160" y="296">AgentCore runtime</text><text x="160" y="342">Sandbox image</text></g>
+  <g fill="#c9c6bf" font-family="Consolas, monospace" font-size="12" text-anchor="middle"><text x="160" y="21">01 / COORDINATE</text><text x="75" y="205">Session state</text><text x="245" y="205">Workflows</text><text x="160" y="247">02 / EXECUTE</text><text x="160" y="400">Isolated execution</text></g>
+</svg>

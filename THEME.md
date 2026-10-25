@@ -1,25 +1,23 @@
 # Engineering Journal theme — v1.0.0
 
-The homepage and résumé use the same shared CSS foundations:
-- Background: #0B0B0B; text: #F5F2EB; secondary text: #C9C6BF.
-- Georgia headlines, system sans-serif body at 18px, monospace labels.
-- A 1200px maximum content width, fine gray dividers, visible focus, and the same name/header treatment.
+The homepage, project collection, and résumé route share a restrained monochrome system:
+
+- Background `#0B0B0B`, text `#F5F2EB`, secondary text `#C9C6BF`.
+- Georgia headlines, system sans-serif body, and monospace labels.
+- A 1200px maximum content width, fine gray dividers, visible focus, and generous spacing.
 - No gradients, colored accents, external fonts, background animation, or scroll-reveal gates.
 
-## One source, two local copies
+## One source of truth
 
-The canonical file is `theme.css` in `sarvesh1karandikar/sarveshk-landing`.
-The résumé includes an identical copy at `public/theme.css` in `sarvesh1karandikar/sarveshk-dev`.
-Each site serves its own copy; neither site downloads CSS from the other domain.
+The canonical theme is `theme.css` in this repository. The `/resume/` route imports that file directly. The project collection keeps the same token values in its page stylesheet so its editorial layout remains self-contained.
 
-From the landing checkout, after updating the canonical file:
+The original `resume.sarveshk.dev` repository still has a local copy at `public/theme.css`. Keep that copy synchronized when the theme changes:
+
 ```sh
 node scripts/sync-theme.mjs ../sarveshk-dev
 node scripts/sync-theme.mjs ../sarveshk-dev --check
 ```
 
-Update the version comment for future theme releases. Commit the canonical change and the synchronized copy in paired pull requests. Review both previews together, then publish their approved changes together. The helper verifies the destination repository before copying.
+The helper verifies the destination repository before copying. Review the root site, project collection, and résumé route together before publishing theme changes.
 
-Keep page-specific layouts in each site's existing stylesheet. New pages should reuse the shared colors, fonts, spacing, controls, and focus behavior while choosing a layout appropriate for their content.
-
-The résumé's content data, PDF documents, domain configuration, package lock, and deployment workflow are preserved by this theme update.
+Keep page-specific layouts in their existing stylesheets. New pages should reuse the shared colors, fonts, spacing, controls, and focus behavior while choosing a layout appropriate for their content.

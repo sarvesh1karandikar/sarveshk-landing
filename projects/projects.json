@@ -1,0 +1,262 @@
+[
+  {
+    "name": "ai-radar",
+    "description": null,
+    "language": "TypeScript",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/ai-radar",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-10-25T16:58:32Z"
+  },
+  {
+    "name": "sarveshk-dev",
+    "description": null,
+    "language": "TypeScript",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/sarveshk-dev",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-09T16:57:09Z"
+  },
+  {
+    "name": "drivesuite-infra",
+    "description": null,
+    "language": "Shell",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/drivesuite-infra",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-05T17:12:59Z"
+  },
+  {
+    "name": "drivesuite-mcp",
+    "description": null,
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/drivesuite-mcp",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-05T17:05:13Z"
+  },
+  {
+    "name": "drivesuite-agent",
+    "description": null,
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/drivesuite-agent",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-05T17:05:12Z"
+  },
+  {
+    "name": "drivesuite-docs",
+    "description": null,
+    "language": null,
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/drivesuite-docs",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-05T16:50:41Z"
+  },
+  {
+    "name": "alpacabot-dashboard",
+    "description": "Terminal-themed trading dashboard for AlpacaBot",
+    "language": "HTML",
+    "homepage": "https://sarvesh1karandikar.github.io/alpacabot-dashboard/",
+    "html_url": "https://github.com/sarvesh1karandikar/alpacabot-dashboard",
+    "topics": [
+      "dashboard",
+      "javascript",
+      "trading"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-04T19:48:26Z"
+  },
+  {
+    "name": "sarveshk-landing",
+    "description": "Landing page for sarveshk.dev",
+    "language": "HTML",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/sarveshk-landing",
+    "topics": [],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-04T16:40:36Z"
+  },
+  {
+    "name": "chromadb",
+    "description": "FastAPI RAG backend: document ingest + semantic retrieval (ChromaDB)",
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/chromadb",
+    "topics": [
+      "fastapi",
+      "python",
+      "rag"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-03T18:48:58Z"
+  },
+  {
+    "name": "workout",
+    "description": "Offline-first workout tracker PWA (React + TypeScript)",
+    "language": "TypeScript",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/workout",
+    "topics": [
+      "pwa",
+      "react",
+      "typescript"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-03T18:48:57Z"
+  },
+  {
+    "name": "DriveSuite",
+    "description": "WhatsApp to Jellyfin/Sonarr media bridge with local + cloud LLM routing",
+    "language": "JavaScript",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/DriveSuite",
+    "topics": [
+      "docker",
+      "nodejs",
+      "whatsapp"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-03T18:48:56Z"
+  },
+  {
+    "name": "1DotDev",
+    "description": "Production WhatsApp-native AI assistant on AWS Lightsail",
+    "language": "JavaScript",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/1DotDev",
+    "topics": [
+      "aws",
+      "nodejs",
+      "whatsapp"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "main",
+    "updated_at": "2026-06-03T18:48:54Z"
+  },
+  {
+    "name": "cricket-excitement-nlp",
+    "description": "NLP classifier rating cricket-match excitement 1-5",
+    "language": "Python",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/cricket-excitement-nlp",
+    "topics": [
+      "machine-learning",
+      "nlp",
+      "scikit-learn"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-03T18:48:52Z"
+  },
+  {
+    "name": "offspring-face-gan",
+    "description": "Conditional GAN predicting a child's face from two parents",
+    "language": "Jupyter Notebook",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/offspring-face-gan",
+    "topics": [
+      "gan",
+      "machine-learning",
+      "tensorflow"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-03T18:48:19Z"
+  },
+  {
+    "name": "satellite-road-detection",
+    "description": "Classical CV pipeline detecting roads in satellite imagery",
+    "language": "MATLAB",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/satellite-road-detection",
+    "topics": [
+      "computer-vision",
+      "image-processing",
+      "matlab"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-03T18:48:18Z"
+  },
+  {
+    "name": "lstm-text-generator",
+    "description": "From-scratch NumPy RNN/LSTM for sequential text generation",
+    "language": "Jupyter Notebook",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/lstm-text-generator",
+    "topics": [
+      "machine-learning",
+      "nlp",
+      "numpy"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-03T18:48:17Z"
+  },
+  {
+    "name": "cifar-dcgan",
+    "description": "DCGAN generating CIFAR-10 images from noise (TensorFlow)",
+    "language": "Jupyter Notebook",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/cifar-dcgan",
+    "topics": [
+      "gan",
+      "machine-learning",
+      "tensorflow"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-03T18:48:16Z"
+  },
+  {
+    "name": "cifar-image-classifier",
+    "description": "CNN image classifier on CIFAR-10 (TensorFlow), ~75% test accuracy",
+    "language": "Jupyter Notebook",
+    "homepage": null,
+    "html_url": "https://github.com/sarvesh1karandikar/cifar-image-classifier",
+    "topics": [
+      "computer-vision",
+      "machine-learning",
+      "tensorflow"
+    ],
+    "fork": false,
+    "archived": false,
+    "default_branch": "master",
+    "updated_at": "2026-06-03T18:48:15Z"
+  }
+]

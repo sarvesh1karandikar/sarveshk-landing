@@ -1,6 +1,10 @@
 # sarveshk.dev
 
-A static engineering portfolio. No framework, client JavaScript, external fonts, analytics, package installation, or build step is required.
+A static engineering portfolio served by GitHub Pages. The site is organized under one domain:
+
+- `/` — introduction and selected professional work.
+- `/projects/` — searchable public repository collection, with a saved snapshot and an optional live refresh from GitHub.
+- `/resume/` — the full résumé and one-page PDF.
 
 ## Local preview
 
@@ -10,20 +14,20 @@ From the repository root, run:
 python -m http.server 4173 --bind 127.0.0.1
 ```
 
-Open http://127.0.0.1:4173/. The page, styles, and both SVG illustrations are served directly. Native HTML disclosures and anchors work without JavaScript.
+Open `http://127.0.0.1:4173/`. The project and résumé routes are available at `/projects/` and `/resume/`.
 
 ## Content and design
 
-The homepage uses a monochrome editorial layout with system fonts. CSS switches the conceptual execution illustration to a readable vertical variant on mobile. Both illustrations represent responsibilities, not Cisco's internal deployment topology.
+The homepage uses a monochrome editorial layout with system fonts. Its conceptual execution illustrations describe responsibilities and do not represent Cisco's internal deployment topology.
 
-Cisco experience is separate from independent projects. Personal contributions and shared team context are identified explicitly. No confidential performance figures or production availability guarantees are included.
+Cisco experience is separate from independent projects. Personal contributions and shared team context are identified explicitly. The project collection reads only public repositories from GitHub; the checked-in snapshot remains available if GitHub cannot be reached.
+
+The résumé route is a static copy of the built site from `sarveshk-dev`, with its assets and current one-page PDF. When the résumé changes, regenerate it from that repository, copy the updated build into `resume/`, and review the root, project, and résumé routes together.
 
 ## Publishing and rollback
 
-Keep `CNAME` set to `sarveshk.dev`. The separate `resume.sarveshk.dev` site is not managed by this repository.
+Keep `CNAME` set to `sarveshk.dev`. GitHub Pages publishes the repository root through its existing `pages build and deployment` process; these files do not need a new Actions workflow.
 
-The existing repository uses GitHub Pages' `pages build and deployment` process. Confirm its branch and folder in Settings → Pages before merging. Retain that configuration; no new Actions workflow is required for these static files.
+The existing `resume.sarveshk.dev` and Sites project URL remain available while the unified routes are verified. DNS and hosting settings are not part of this repository change.
 
-The redesign is prepared locally for review. It must not be merged or published until approved. Check desktop and mobile previews and verify contact, résumé, and project destinations first.
-
-The pre-redesign commit is `ca7513c78c593dc8e0b8e58d67911ce08c3736e0`. To undo a published redesign, revert its merge/commit through normal Git history and let Pages redeploy. Do not force-push or change domain settings.
+To roll back, revert the published commit through normal Git history and let Pages redeploy. Do not force-push or change domain settings as part of a content rollback.

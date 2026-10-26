@@ -18,7 +18,7 @@ Open `http://127.0.0.1:4173/`. The project and résumé routes are available at 
 
 ## Content and design
 
-The homepage uses a monochrome editorial layout with system fonts. Its conceptual execution illustrations describe responsibilities and do not represent Cisco's internal deployment topology.
+The homepage is a concise profile: who Sarvesh is, how his career developed, selected Cisco contributions, and the engineering principles he cares about. The full résumé and independent repository collection live on their own routes.
 
 Cisco experience is separate from independent projects. Personal contributions and shared team context are identified explicitly. The project collection reads only public repositories from GitHub; the checked-in snapshot remains available if GitHub cannot be reached.
 
@@ -28,6 +28,6 @@ The résumé route is a static copy of the built site from `sarveshk-dev`, with 
 
 Keep `CNAME` set to `sarveshk.dev`. GitHub Pages publishes the repository root through its existing `pages build and deployment` process; these files do not need a new Actions workflow.
 
-The existing `resume.sarveshk.dev` and Sites project URL remain available while the unified routes are verified. DNS and hosting settings are not part of this repository change.
+`resume.sarveshk.dev` forwards to `/resume/`. The Sites-hosted project copy remains available; `/projects/` is the canonical collection. DNS and hosting settings are not part of this repository.
 
 To roll back, revert the published commit through normal Git history and let Pages redeploy. Do not force-push or change domain settings as part of a content rollback.

@@ -29,6 +29,8 @@
 .project-overview p { font-size: 18px; line-height: 1.6; }
 .stack { font-size: 12px; line-height: 1.9; margin-top: 26px; color: var(--secondary); }
 .stack span { padding-inline: 7px; }
+.work-result { border-left: 2px solid var(--line); margin-top: 24px; padding-left: 20px; max-width: 700px; }
+.work-result p { font-size: 18px; }
 .case-study { border-top: 1px solid var(--line); margin-top: 24px; }
 summary { cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 58px; padding-block: 14px; list-style: none; font-size: 15px; }
 summary::-webkit-details-marker { display: none; }

@@ -1,0 +1,10 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { normalize, selectRepositories, renderRow } from '../projects/catalog.js';
+const page = new URL('../projects/index.html', import.meta.url);
+const snapshot = normalize(JSON.parse(await readFile(new URL('../projects/projects.json', import.meta.url), 'utf8')));
+let html = await readFile(page, 'utf8');
+if (!/<div id="archive">[\s\S]*?<\/div>(?=\s*<div id="empty")/.test(html)) throw new Error('Missing collection container');
+html = html.replace(/<div id="archive">[\s\S]*?<\/div>(?=\s*<div id="empty")/, `<div id="archive">\n${selectRepositories(snapshot).map(renderRow).join('\n')}\n</div>`);
+html = html.replace(/(<span id="repo-total">)[^<]*/, `$1${snapshot.length} public repositories overall`);
+await writeFile(page, html);
+console.log('Saved HTML collection synchronized with catalog and snapshot.');

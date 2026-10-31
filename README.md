@@ -24,6 +24,10 @@ Cisco experience is separate from independent projects. Personal contributions a
 
 The résumé route is a static copy of the built site from `sarveshk-dev`, with its assets and current one-page PDF. When the résumé changes, regenerate it from that repository, copy the updated build into `resume/`, and review the root, project, and résumé routes together.
 
+Build the résumé application with `npm run generate:pdf` and `npm run build` in the adjacent `sarveshk-dev` checkout. Then run `node scripts/sync-resume.mjs` here. The script copies `dist/resume.html`, its assets, and the PDF into `/resume/`. The source repository's root redirect stays separate from its résumé application entry point.
+
+The project catalogue lives in `projects/catalog.js`. Both browser filtering and the saved HTML use that catalogue. After changing catalogue text or the repository snapshot, run `node scripts/sync-collection.mjs`. Run `node --test scripts/catalog.test.mjs` to check ordering, filters, input handling, and saved-HTML consistency. GitHub refresh is optional; the saved collection and static HTML remain usable when requests fail.
+
 ## Publishing and rollback
 
 Keep `CNAME` set to `sarveshk.dev`. GitHub Pages publishes the repository root through its existing `pages build and deployment` process; these files do not need a new Actions workflow.

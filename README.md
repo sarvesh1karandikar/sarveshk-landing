@@ -32,7 +32,7 @@ The homepage links to the Radar edition preview and the local 1DotDev command ex
 
 The résumé build renders complete HTML from its typed content. Browser JavaScript enhances navigation rather than constructing the page. Experience, projects, and education appear in that order. The shared social image is generated with `npm run generate:og` in `sarveshk-dev` and copied by the résumé sync step.
 
-Run `node --test scripts/*.test.mjs` for content and behavior checks. `Verify published website` runs after a successful Pages deployment (or on manual dispatch): it compares deployed files against the release, tests project search and the note example in Chrome, checks mobile layouts, and reads the résumé with JavaScript disabled. Its browser dependency is locked under `checks/`; hosting settings stay unchanged. A failed browser check uploads a diagnostic screenshot.
+Run `node --test scripts/*.test.mjs` for content and behavior checks. `Verify published website` runs on main-branch publishes (or manual dispatch) and waits for the served content to match the release before continuing. It then tests project search and the note example in Chrome, checks mobile layouts, and reads the résumé with JavaScript disabled. Its browser dependency is locked under `checks/`; hosting settings stay unchanged. A failed browser check uploads a diagnostic screenshot.
 
 ## Publishing and rollback
 

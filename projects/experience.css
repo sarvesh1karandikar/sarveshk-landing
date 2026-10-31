@@ -16,6 +16,24 @@ input[type='search'] { font-size: 16px; }
 .archive-row .status { font-size: 11px; }
 .archive-row h3 a, .repo-disclosure li a { display: inline-flex; align-items: center; min-height: 44px; }
 .feature-margin > .eyebrow { display: block; }
+.demo-panel { margin-block: 30px; border-top: 1px solid var(--line); padding-top: 24px; }
+.demo-panel h4 { margin-block: 12px 16px; font: 700 28px/1.2 var(--serif); }
+.demo-panel > p:not(.eyebrow) { font-size: 16px; }
+.demo-log { border: 1px solid var(--line); margin-block: 22px; padding: 20px; }
+.demo-exchange + .demo-exchange { border-top: 1px solid var(--quiet-line); margin-top: 20px; padding-top: 20px; }
+.demo-speaker { font: 11px/1.7 var(--mono); text-transform: uppercase; letter-spacing: .06em; margin-block: 12px 5px; }
+.demo-message { color: var(--text); white-space: pre-wrap; overflow-wrap: anywhere; font-size: 16px; }
+.demo-controls { display: flex; flex-wrap: wrap; gap: 12px; margin-block: 10px 16px; }
+.demo-controls input { flex: 1 1 220px; width: 100%; min-width: 0; background: var(--bg); color: var(--text); border: 1px solid var(--line); padding: 12px; font: 16px/1.5 var(--sans); border-radius: 0; }
+.demo-controls .button { gap: 18px; }
+.demo-help, .demo-help code { font: 13px/1.8 var(--mono); overflow-wrap: anywhere; }
+.demo-reset { background: transparent; color: var(--text); border: 0; padding: 8px 0; margin: 12px 24px 0 0; min-height: 44px; text-decoration: underline; text-underline-offset: 5px; font-size: 14px; }
+.demo-panel [disabled] { opacity: .6; cursor: default; }
+.radar-sample { list-style: none; padding: 0; margin: 20px 0; }
+.radar-sample li { border-top: 1px solid var(--quiet-line); padding-block: 14px; }
+.radar-sample a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 18px; }
+.demo-links { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 700px) {
   .project-flow { padding: 20px; }
   .flow-steps { grid-template-columns: 1fr; gap: 28px; }

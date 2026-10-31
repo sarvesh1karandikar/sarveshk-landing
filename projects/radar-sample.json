@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-31",
+  "mode": "live",
+  "generatedAt": "2026-10-31T17:31:27.987Z",
+  "editionURL": "https://ai-radar.sarveshk.dev/",
+  "sourceURL": "https://github.com/sarvesh1karandikar/ai-radar/blob/85407c295d6f43a9d07f16bb64f168979eacbe5c/content/latest.json",
+  "items": [
+    {
+      "title": "Configure the ChatGPT desktop app with Amazon Bedrock in AWS GovCloud (US)",
+      "url": "https://aws.amazon.com/blogs/machine-learning/configure-the-chatgpt-desktop-app-with-amazon-bedrock-in-aws-govcloud-us/",
+      "source": "AWS Machine Learning Blog",
+      "signal": "primary"
+    },
+    {
+      "title": "Managed Agents",
+      "url": "https://www.anthropic.com/research/managed-agents",
+      "source": "Anthropic",
+      "signal": "primary"
+    },
+    {
+      "title": "NEOPIC: A Neural Operator Framework for Particle-based Kinetic Plasma Simulations",
+      "url": "http://arxiv.org/abs/2610.40528v1",
+      "source": "arXiv AI Systems Query",
+      "signal": "research"
+    }
+  ]
+}

@@ -28,6 +28,12 @@ Build the résumé application with `npm run generate:pdf` and `npm run build` i
 
 The project catalogue lives in `projects/catalog.js`. Both browser filtering and the saved HTML use that catalogue. After changing catalogue text or the repository snapshot, run `node scripts/sync-collection.mjs`. Run `node --test scripts/catalog.test.mjs` to check ordering, filters, input handling, and saved-HTML consistency. GitHub refresh is optional; the saved collection and static HTML remain usable when requests fail.
 
+The homepage links to the Radar edition preview and the local 1DotDev command example. The latter uses fictional in-memory notes; it never connects to the private assistant. `projects/radar-sample.json` records a dated published edition and a pinned source commit so it remains attributable as newer editions are published.
+
+The résumé build renders complete HTML from its typed content. Browser JavaScript enhances navigation rather than constructing the page. Experience, projects, and education appear in that order. The shared social image is generated with `npm run generate:og` in `sarveshk-dev` and copied by the résumé sync step.
+
+Run `node --test scripts/*.test.mjs` for content and behavior checks. `Verify published website` runs after a successful Pages deployment (or on manual dispatch): it compares deployed files against the release, tests project search and the note example in Chrome, checks mobile layouts, and reads the résumé with JavaScript disabled. Its browser dependency is locked under `checks/`; hosting settings stay unchanged. A failed browser check uploads a diagnostic screenshot.
+
 ## Publishing and rollback
 
 Keep `CNAME` set to `sarveshk.dev`. GitHub Pages publishes the repository root through its existing `pages build and deployment` process; these files do not need a new Actions workflow.

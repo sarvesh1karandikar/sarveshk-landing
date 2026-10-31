@@ -1,0 +1,40 @@
+name: Verify published website
+
+on:
+  workflow_run:
+    workflows: [pages build and deployment]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: published-website-checks
+  cancel-in-progress: true
+
+jobs:
+  smoke:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: checks/package-lock.json
+      - run: node --test scripts/*.test.mjs
+      - run: node scripts/check-site.mjs
+      - run: npm ci --prefix checks --ignore-scripts --no-audit --no-fund
+      - run: node scripts/smoke-browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: website-smoke-failure
+          path: checks-output/
+          if-no-files-found: ignore

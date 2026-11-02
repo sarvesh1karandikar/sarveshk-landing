@@ -23,7 +23,7 @@
 .project-margin .eyebrow { font-size: 11px; }
 .margin-note { font-size: 13px; line-height: 1.8; margin-top: 18px; }
 .tag { display: inline-block; font-size: 10px; text-transform: uppercase; letter-spacing: .08em; padding: 5px 8px; border: 1px solid var(--line); margin-top: 22px; }
-.project h3 { font-size: clamp(30px, 3.2vw, 42px); letter-spacing: -.03em; }
+.project h3, .project h1 { font-size: clamp(30px, 3.2vw, 42px); letter-spacing: -.03em; }
 .project-lead { margin-top: 16px; max-width: 650px; }
 .project-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; margin-top: 28px; }
 .project-overview p { font-size: 18px; line-height: 1.6; }
@@ -101,7 +101,7 @@ details[open] .disclosure-icon::after { display: none; }
   .project { grid-template-columns: 1fr; gap: 22px; padding-block: 32px; }
   .project-margin .margin-note { margin-top: 6px; }
   .tag { margin-top: 12px; }
-  .project h3 { font-size: 34px; }
+  .project h3, .project h1 { font-size: 34px; }
   .project-overview { margin-top: 24px; }
   .contact h2 { font-size: 46px; }
   .site-footer { align-items: flex-start; flex-direction: column; gap: 4px; }
@@ -109,3 +109,7 @@ details[open] .disclosure-icon::after { display: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
 }
+
+.case-heading { font: 600 18px/1.5 var(--sans); margin-bottom: 10px; }
+
+.case-links { display: flex; flex-wrap: wrap; gap: 8px 28px; }

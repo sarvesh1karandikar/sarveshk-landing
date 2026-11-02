@@ -7,7 +7,8 @@ const read = path => readFile(new URL(path,root),'utf8');
 test('résumé has useful static content and experience appears before education',async()=>{
   const html=await read('resume/index.html');
   assert.ok(html.includes('Senior Software Engineer — AI Canvas'));
-  assert.ok(html.includes('ChromaDB Retrieval'));
+  assert.ok(html.includes('1DotDev') && html.includes('AI Systems Radar'));
+  assert.ok(!html.includes('ChromaDB Retrieval'));
   assert.ok(['exp','proj','edu'].every(id=>html.includes(`id="${id}"`)));
   assert.ok(html.indexOf('id="exp"')<html.indexOf('id="proj"'));
   assert.ok(html.indexOf('id="proj"')<html.indexOf('id="edu"'));
@@ -21,7 +22,8 @@ test('project evidence stays dated, attributed, and connected to homepage previe
   assert.match(sample.sourceURL,/\/blob\/[a-f0-9]{40}\//);
   assert.ok(html.includes(`datetime="${sample.date}"`));
   for(const item of sample.items) assert.ok(html.includes(escapeHTML(item.title))&&html.includes(escapeHTML(item.url)));
-  for(const anchor of ['assistant-demo','radar-demo']) {assert.ok(html.includes(`id="${anchor}"`));assert.ok(home.includes(`/projects/#${anchor}`));}
+  for(const anchor of ['assistant-demo','radar-demo']) assert.ok(html.includes(`id="${anchor}"`));
+  for(const anchor of ['1dotdev','ai-radar']) assert.ok(home.includes(`/projects/#${anchor}`));
   assert.ok(html.includes('fictional data'));
 });
 test('canonical pages share valid preview assets and are included in discovery files',async()=>{

@@ -9,7 +9,7 @@ assert.ok(resume.includes('Senior Software Engineer — AI Canvas'), 'Résumé m
 assert.ok(['exp','edu'].every(id=>resume.includes(`id="${id}"`)), 'Résumé sections must exist');
 assert.ok(resume.indexOf('id="exp"') < resume.indexOf('id="edu"'), 'Experience must precede education');
 const assets = [...resume.matchAll(/(?:src|href)="\.\/(assets\/[^\"]+)"/g)].map(match => 'resume/' + match[1]);
-const files = ['index.html','theme.css','styles.css','projects/index.html','projects/archive.js','projects/catalog.js','projects/experience.css','projects/demo.js','projects/note-example.js','projects/radar-sample.json','projects/projects.json','resume/index.html',...assets,'resume/sarvesh-karandikar.pdf','assets/social-preview.png','robots.txt','sitemap.xml'];
+const files = ['index.html','theme.css','styles.css','work/index.html','work/ai-canvas/index.html','work/nexus-dashboard/index.html','work/cloud-network-controller/index.html','projects/index.html','projects/archive.js','projects/catalog.js','projects/experience.css','projects/demo.js','projects/note-example.js','projects/radar-sample.json','projects/projects.json','resume/index.html',...assets,'resume/sarvesh-karandikar.pdf','assets/social-preview.png','robots.txt','sitemap.xml'];
 const attempts = Number(process.env.SMOKE_ATTEMPTS || 6);
 assert.ok(Number.isInteger(attempts) && attempts > 0 && attempts <= 10, 'SMOKE_ATTEMPTS must be 1–10');
 let failures = [];

@@ -14,36 +14,36 @@ try {
   await page.setViewport({width:1280,height:900});
   await page.goto(base+'/',{waitUntil:'networkidle0'});
   assert.equal(await page.$eval('h1',e=>e.textContent),'I build infrastructure for AI agents.');
-  await page.click('a[href="#work"].button');
-  await page.click('.case-study summary');
-  assert.equal(await page.$eval('.case-study',e=>e.open),true);
-  await page.goto(base+'/projects/',{waitUntil:'networkidle0'});
-  await page.waitForSelector('#search:not([disabled])');
-  await page.type('#search','centroid');
-  await page.waitForFunction(()=>document.querySelector('#archive').textContent.includes('ChromaDB Retrieval')&&document.querySelectorAll('#archive article').length===1);
-  await page.click('#search');await page.keyboard.down('Control');await page.keyboard.press('A');await page.keyboard.up('Control');
-  await page.type('#search','no-such-project-smoke');
-  await page.waitForFunction(()=>!document.querySelector('#empty').hidden);
-  await page.click('#reset');await page.click('[data-filter="Websites"]');
-  assert.equal(await page.$$eval('#archive article',els=>els.length),2);
+  await page.keyboard.press('Tab');
+  assert.equal(await page.evaluate(() => document.activeElement?.getAttribute('href')), '#main');
+  await page.keyboard.press('Enter');
+  assert.equal(await page.evaluate(() => document.activeElement?.id), 'main');
+  await page.click('a[href="/work/ai-canvas/"]');
+  assert.match(await page.$eval('h1', e => e.textContent), /Agent execution/);
+  await page.click('a[href="/work/"]');
+  assert.match(await page.$eval('h1', e => e.textContent), /Systems behind/);
+  await page.goto(base+'/projects/#assistant-demo',{waitUntil:'networkidle0'});
+  assert.ok(await page.$('#assistant-demo'));
   await page.click('#note-demo-form button[type="submit"]');
   await page.waitForFunction(()=>document.querySelector('#note-demo-log').textContent.includes('*Notes matching "session"*'));
   await page.type('#note-command','/note Smoke check note');await page.click('#note-demo-form button[type="submit"]');
   await page.type('#note-command','/notes search Smoke check');await page.click('#note-demo-form button[type="submit"]');
   assert.match(await page.$eval('#note-demo-log',e=>e.lastElementChild.textContent),/Smoke check note/);
-  for(const width of [1280,390]) {
+  for(const width of [320,390,768,1280]) {
     await page.setViewport({width,height:900});
-    for(const route of ['/','/projects/','/resume/']) {
+    for(const route of ['/','/work/','/work/ai-canvas/','/work/nexus-dashboard/','/work/cloud-network-controller/','/projects/','/resume/']) {
       await page.goto(base+route,{waitUntil:'networkidle0'});
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false,`Overflow: ${route} at ${width}`);
       assert.equal(await page.$$eval('h1',els=>els.length),1);
     }
   }
+  await page.goto(base+'/projects/#radar-demo',{waitUntil:'networkidle0'});
+  assert.ok(await page.$('#radar-demo'));
   const plain=await browser.newPage();await plain.setJavaScriptEnabled(false);
   await plain.goto(base+'/resume/',{waitUntil:'networkidle0'});
   assert.match(await plain.$eval('#exp',e=>e.textContent),/Senior Software Engineer/);
   assert.deepEqual(await plain.$$eval('main > section',els=>els.slice(0,3).map(e=>e.id)),['exp','proj','edu']);
-  console.log('Live browser smoke checks passed, including the résumé without JavaScript.');
+  console.log('Browser journey checks passed, including the résumé without JavaScript.');
 } catch(error) {
   await page.screenshot({path:'checks-output/failure.png',fullPage:true}).catch(()=>{});
   throw error;

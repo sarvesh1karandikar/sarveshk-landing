@@ -26,8 +26,8 @@ test('untrusted descriptions are escaped and links stay on the owner repository'
   assert.ok(!row.includes('<img'));
   assert.ok(row.includes('https://github.com/sarvesh1karandikar/new-project'));
 });
-test('the no-JavaScript HTML collection matches the runtime catalogue', async () => {
+test('the selected projects lead to the public repository collection', async () => {
   const html = await readFile(new URL('../projects/index.html', import.meta.url), 'utf8');
-  const content = html.match(/<div id="archive">([\s\S]*?)<\/div>(?=\s*<div id="empty")/)[1].trim();
-  assert.equal(content, selectRepositories(snapshot).map(renderRow).join('\n'));
+  assert.ok(html.includes('href="https://github.com/sarvesh1karandikar"'));
+  assert.ok(!html.includes('id="archive"'));
 });

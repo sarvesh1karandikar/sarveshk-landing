@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://sarveshk.dev/</loc></url>
+  <url><loc>https://sarveshk.dev/work/</loc></url>
+  <url><loc>https://sarveshk.dev/work/ai-canvas/</loc></url>
+  <url><loc>https://sarveshk.dev/work/nexus-dashboard/</loc></url>
+  <url><loc>https://sarveshk.dev/work/cloud-network-controller/</loc></url>
   <url><loc>https://sarveshk.dev/projects/</loc></url>
   <url><loc>https://sarveshk.dev/resume/</loc></url>
 </urlset>

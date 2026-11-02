@@ -21,18 +21,18 @@
   <header class="site-header wrap">
     <a class="wordmark" href="#top" aria-label="Sarvesh Karandikar, back to top">Sarvesh Karandikar<span aria-hidden="true">.</span></a>
     <nav aria-label="Main navigation">
-      <a href="#about">About</a><a href="#work">Work</a><a href="/projects/">Projects</a><a href="#approach">Approach</a><a href="#contact">Contact</a>
+      <a href="/">Home</a><a href="/work/">Engineering Work</a><a href="/projects/">Projects</a>
       <a class="resume-link" href="/resume/">Résumé <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
   <main id="main" class="wrap" tabindex="-1">
     <section class="hero" id="top" aria-labelledby="hero-title">
-      <div class="hero-copy">
+      <div class="hero-copy"><span id="about"></span>
         <p class="eyebrow">Sarvesh Karandikar / Senior Software Engineer, Cisco</p>
         <h1 id="hero-title">I build infrastructure<br class="desktop-break"> for <em>AI agents.</em></h1>
         <p class="hero-description">At Cisco, I build tools and services for AI agents, drawing on experience in cloud networking and platform engineering.</p>
         <div class="hero-actions">
-          <a class="button" href="#work">View selected work <span aria-hidden="true">↓</span></a>
+          <a class="button" href="/work/">Explore engineering work <span aria-hidden="true">↓</span></a>
           <a class="text-link" href="/resume/">Résumé <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -46,77 +46,25 @@
       </aside>
     </section>
 
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <header class="section-heading"><p class="eyebrow">01 / About</p><h2 id="about-title">What I do</h2></header>
-      <div class="about-grid"><p>I work on the parts that often stay behind the scenes: connecting services, managing sessions, and testing what happens when something stops.</p><p>At Cisco, I’ve also worked on cloud networking and platform software. I like figuring out how the pieces fit and making the software easier to use.</p></div>
+    <section class="section work" id="work" aria-labelledby="work-title">
+      <header class="section-heading"><p class="eyebrow">01 / Engineering work</p><h2 id="work-title">Building systems for AI and cloud infrastructure</h2><p>My work at Cisco spans agent execution, platform coordination, and cloud networking. Start with the flagship case study, then explore the supporting work.</p><a class="text-link" href="/work/">Explore all engineering work <span aria-hidden="true">↗</span></a></header>
+      <article class="project featured"><div class="project-margin"><p class="eyebrow">01 — AI Canvas</p><span class="tag">Featured work</span></div><div class="project-body"><h3 id="canvas-title">Running agents in isolated sandboxes.</h3><p class="project-lead">I built the AgentCore integration and sandbox image connecting agent execution to the AI Canvas runtime.</p><p>My work also covered session management and coordination with Redis and Temporal. I tested disruption behavior by terminating orchestrator pods during active queries.</p><a class="text-link" href="/work/ai-canvas/">Read the AI Canvas case study <span aria-hidden="true">↗</span></a></div></article>
+      <div class="independent-grid"><article class="independent-card"><p class="eyebrow">02 — NEXUS DASHBOARD</p><h3 id="nexus-title">Secure service coordination.</h3><p>Certificate management, external certificate authority integration, and a Java active–standby leadership framework.</p><a class="text-link" href="/work/nexus-dashboard/">Explore Nexus Dashboard <span aria-hidden="true">↗</span></a></article><article class="independent-card"><p class="eyebrow">03 — CLOUD APIC</p><h3 id="cloud-title">Mapping cloud network connections.</h3><p>A Terraform collection service feeding network configuration into a graph database.</p><a class="text-link" href="/work/cloud-network-controller/">Explore Cloud APIC <span aria-hidden="true">↗</span></a></article></div>
     </section>
 
     <section class="section independent" id="independent" aria-labelledby="independent-title">
-      <header class="section-heading"><p class="eyebrow">02 / Independent work</p><h2 id="independent-title">From an idea to something useful.</h2><p>Personal projects let me explore the whole system, from the interface to the infrastructure behind it.</p></header>
-      <div class="independent-grid"><article class="independent-card"><p class="eyebrow">Data pipelines</p><h3>AI Systems Radar</h3><p>A daily reading digest that collects, groups, and ranks public AI systems sources without an LLM dependency.</p><p class="independent-proof">See a published edition and the pipeline behind it.</p><a class="text-link" href="/projects/#radar-demo">Explore the reading digest <span aria-hidden="true">↗</span></a></article>
-      <article class="independent-card"><p class="eyebrow">Personal assistants</p><h3>1DotDev</h3><p>A WhatsApp-native assistant with per-user history, notes, remembered facts, and reminders.</p><p class="independent-proof">Try a small note-command example with fictional data.</p><a class="text-link" href="/projects/#assistant-demo">Try the note example <span aria-hidden="true">↗</span></a></article></div><a class="text-link all-projects" href="/projects/">Explore all independent projects <span aria-hidden="true">↗</span></a>
+      <header class="section-heading"><p class="eyebrow">02 / INDEPENDENT PROJECTS</p><h2 id="independent-title">Two systems, built end to end.</h2><p>Selected personal work follows the professional case studies. Read each project’s context before trying its example.</p></header>
+      <div class="independent-grid"><article class="independent-card"><p class="eyebrow">DATA PIPELINES</p><h3>AI Systems Radar</h3><p>A daily reading digest that collects, groups, and ranks public AI systems sources without an LLM dependency.</p><a class="text-link" href="/projects/#ai-radar">Read the project <span aria-hidden="true">↗</span></a></article><article class="independent-card"><p class="eyebrow">PERSONAL ASSISTANTS</p><h3>1DotDev</h3><p>A WhatsApp-native assistant with per-user history, notes, remembered facts, and reminders.</p><a class="text-link" href="/projects/#1dotdev">Read the project <span aria-hidden="true">↗</span></a></article></div>
+      <a class="text-link all-projects" href="/projects/">Explore selected projects <span aria-hidden="true">↗</span></a>
     </section>
-
-    <section class="section work" id="work" aria-labelledby="work-title">
-      <header class="section-heading"><p class="eyebrow">03 / Selected work</p><h2 id="work-title">Work at Cisco</h2><p>Here are three projects I worked on at Cisco, with my role in each.</p></header>
-      <article class="project featured" aria-labelledby="canvas-title">
-        <div class="project-margin"><p class="eyebrow">01 — AI Canvas</p><p class="margin-note">AI applications<br>Runtime and sessions</p><span class="tag">Featured work</span></div>
-        <div class="project-body">
-          <h3 id="canvas-title">Running agents in isolated sandboxes.</h3>
-          <p class="project-lead">I built the AgentCore integration and sandbox image that connect agent execution to the AI Canvas runtime.</p>
-          <div class="project-overview"><div><h4>The challenge</h4><p>Agent sessions rely on several services working together. They need to stay coordinated when requests overlap or a service stops.</p></div><div><h4>My part</h4><p>I built the connection to AgentCore and a custom sandbox image. I also worked on session management and coordinating tasks with Redis and Temporal.</p></div></div>
-          <p class="stack">AgentCore <span>/</span> Redis <span>/</span> Temporal <span>/</span> Containers</p>
-          <div class="work-result"><h4>What this enables</h4><p>Isolated agent execution with explicit session coordination. I tested the disruption path by terminating orchestrator pods during active queries to examine continuity and routing.</p></div>
-          <details class="case-study">
-            <summary><span>More about the work</span><span class="disclosure-icon" aria-hidden="true"></span></summary>
-            <div class="case-content">
-              <section><h4>The problem</h4><p>Moving toward sandbox-based execution introduces boundaries between orchestration, runtime management, and session state. Those boundaries need explicit coordination, particularly when multiple sessions or requests are active.</p></section>
-              <section><h4>My contribution</h4><ul><li>Built the AgentCore management integration.</li><li>Developed a custom sandbox image for isolated agent execution.</li><li>Worked on the orchestrator with Redis and Temporal, including distributed concurrency and session management.</li><li>Tested session behavior by terminating orchestrator pods during active queries.</li></ul></section>
-              <section><h4>Working with the team</h4><p>The wider AI Canvas platform and architecture were shared team work. My contribution focused on the integration, sandbox image, orchestration, and testing described here.</p></section>
-              <section><h4>Validation</h4><p>I used controlled pod termination during active queries to examine session continuity and routing across orchestrator instances. The focus was understanding behavior during disruption, alongside normal execution.</p></section>
-            </div>
-          </details>
-        </div>
-      </article>
-      <article class="project" aria-labelledby="nexus-title">
-        <div class="project-margin"><p class="eyebrow">02 — Nexus Dashboard</p><p class="margin-note">Network software<br>Platform engineering</p></div>
-        <div class="project-body"><h3 id="nexus-title">Network management infrastructure.</h3><p class="project-lead">I built certificate and service-coordination components within the Nexus Dashboard platform.</p>
-          <div class="project-overview"><div><h4>The challenge</h4><p>Network management software needs secure service connections and a clear way to keep backup processes in sync.</p></div><div><h4>My part</h4><p>I worked on Kubernetes certificate management, connections to external certificate authorities, and a Java framework for choosing the active service.</p></div></div>
-          <p class="stack">Kubernetes <span>/</span> Java <span>/</span> PKI <span>/</span> Postgres</p>
-          <div class="work-result"><h4>What this enables</h4><p>Automated CA creation and service signing, external-CA onboarding for XE/XR devices, and a reusable Java framework for active-standby leadership.</p></div>
-          <details class="case-study"><summary><span>More about the work</span><span class="disclosure-icon" aria-hidden="true"></span></summary><div class="case-content">
-            <section><h4>The problem</h4><p>Infrastructure services need explicit coordination and certificate lifecycles within a larger network management platform.</p></section>
-            <section><h4>My contribution</h4><p>I worked on certificate management for Kubernetes communications and external-CA integration, and implemented an SPI-based Java leader-election framework for active-standby configurations.</p></section>
-            <section><h4>Working with the team</h4><p>These were contributions within the Nexus Dashboard team. The broader product and infrastructure were developed collectively.</p></section>
-            <section><h4>Decisions and result</h4><p>Certificate automation supports service trust and external-CA onboarding. The Java framework uses an SPI-based interface for active-standby leader election, providing a shared coordination mechanism for services.</p></section>
-          </div></details>
-        </div>
-      </article>
-      <article class="project" aria-labelledby="cloud-title">
-        <div class="project-margin"><p class="eyebrow">03 — Cloud APIC</p><p class="margin-note">Cloud networking<br>Network data</p></div>
-        <div class="project-body"><h3 id="cloud-title">Mapping cloud network connections.</h3><p class="project-lead">Collecting network configuration and showing how its parts connect.</p>
-          <div class="project-overview"><div><h4>The challenge</h4><p>Cloud network settings make more sense when you can see how resources relate to each other.</p></div><div><h4>My part</h4><p>I built a Terraform collection service that fed configuration into a graph database for Cloud APIC / Cloud Network Controller.</p></div></div>
-          <p class="stack">Python <span>/</span> Terraform <span>/</span> Dgraph <span>/</span> Cloud networking</p>
-          <div class="work-result"><h4>What this enables</h4><p>Terraform configuration becomes part of a unified graph representation, connecting collected resources with their relationships for network analysis.</p></div>
-          <details class="case-study"><summary><span>More about the work</span><span class="disclosure-icon" aria-hidden="true"></span></summary><div class="case-content">
-            <section><h4>The problem</h4><p>A network model needs to represent resources and their relationships across cloud environments.</p></section>
-            <section><h4>My contribution</h4><p>I built a Terraform collection service feeding a unified graph database, as part of my cloud networking work.</p></section>
-            <section><h4>Working with the team</h4><p>The collection service was one contribution to the broader Cloud Network Controller product. The overall architecture and product were team work.</p></section>
-            <section><h4>Decisions and result</h4><p>The collection service feeds configuration into Dgraph, representing relationships alongside resources. That graph representation makes collected configuration available to the broader network model.</p></section>
-          </div></details>
-        </div>
-      </article>
-    </section>
-
-    
 
     <section class="section approach" id="approach" aria-labelledby="approach-title">
-      <div><p class="eyebrow">04 / How I work</p><h2 id="approach-title">I test what happens<br>when things fail.</h2><p class="approach-intro">In AI Canvas, I terminated orchestrator pods during active queries to examine session continuity and routing. A successful request is only one part of the story.</p></div>
+      <div><p class="eyebrow">03 / How I work</p><h2 id="approach-title">I test what happens<br>when things fail.</h2><p class="approach-intro">In AI Canvas, I terminated orchestrator pods during active queries to examine session continuity and routing. A successful request is only one part of the story.</p></div>
       <ol class="principles"><li><h3>Make boundaries explicit.</h3><p>The AgentCore integration separates orchestration from sandbox execution. That isolation also introduces coordination between the runtime and the services managing it.</p></li><li><h3>Treat state as part of the design.</h3><p>My session-management work uses Redis and Temporal to coordinate tasks. When requests overlap, session ownership matters as much as the request handler.</p></li><li><h3>Exercise the disruption path.</h3><p>Stopping a pod during an active query tests behavior that the normal flow cannot reveal. I use that scenario to inspect continuity across orchestrator instances.</p></li></ol>
     </section>
 
     <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow">05 / Contact</p><h2 id="contact-title">Get in touch.</h2><p>I’m happy to talk about software, infrastructure, and AI.</p>
+      <p class="eyebrow">04 / Contact</p><h2 id="contact-title">Get in touch.</h2><p>I’m happy to talk about software, infrastructure, and AI.</p>
       <a class="contact-email" href="mailto:sarvesh1karandikar@gmail.com">sarvesh1karandikar@gmail.com <span aria-hidden="true">↗</span></a>
       <div class="contact-links"><a href="/projects/">Projects <span aria-hidden="true">↗</span></a><a href="https://github.com/sarvesh1karandikar">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/sarveshkarandikar/">LinkedIn <span aria-hidden="true">↗</span></a><a href="/resume/">Résumé <span aria-hidden="true">↗</span></a></div>
     </section>

@@ -10,24 +10,24 @@
 </head>
 <body><a class="skip" href="#main">Skip to content</a>
 <header class="nav wrap"><a class="brand" href="../">Sarvesh Karandikar</a>
-<nav aria-label="Main navigation"><a href="../">Work</a><a href="#selected" aria-current="page">Projects</a><a href="https://github.com/sarvesh1karandikar">GitHub ↗</a><a class="resume-link" href="../resume/">Résumé ↗</a>
+<nav aria-label="Main navigation"><a href="/">Home</a><a href="/work/">Engineering Work</a><a href="/projects/" aria-current="page">Projects</a><a href="/resume/">Résumé</a><a href="https://github.com/sarvesh1karandikar">GitHub ↗</a>
 </nav>
 </header>
 <main id="main" tabindex="-1">
 <section class="hero wrap">
 <div><p class="eyebrow">INDEPENDENT WORK / SELECTED SYSTEMS</p><h1>Built to explore.<br><em>Made to explain.</em></h1><p class="intro">AI assistants, data pipelines, and connected systems. A closer look at what I built, the choices behind it, and what comes next.</p>
-<div class="hero-actions"><a class="button" href="#selected">Explore selected work ↓</a><a class="text-link" href="#collection">Browse the collection ↗</a>
+<div class="hero-actions"><a class="button" href="#selected">Explore selected work ↓</a><a class="text-link" href="#collection">More on GitHub ↓</a>
 </div>
 </div>
-<aside class="hero-side"><p class="eyebrow">START WITH THESE THREE</p><p>Three projects. Three different engineering problems.</p>
-<div class="jump-links"><a href="#1dotdev"><span>01 / 1DotDev</span><span>↓</span></a><a href="#ai-radar"><span>02 / AI Systems Radar</span><span>↓</span></a><a href="#drivesuite"><span>03 / DriveSuite</span><span>↓</span></a>
+<aside class="hero-side"><p class="eyebrow">SELECTED PROJECTS</p><p>Two selected projects, with context before the examples.</p>
+<div class="jump-links"><a href="#1dotdev"><span>01 / 1DotDev</span><span>↓</span></a><a href="#ai-radar"><span>02 / AI Systems Radar</span><span>↓</span></a>
 </div>
 </aside>
 </section>
 <section id="selected" class="selected-section wrap">
 <div class="section-heading">
 <div><p class="eyebrow">01 / SELECTED PROJECTS</p><h2>Beyond the repository.</h2><p class="section-intro">The problem, the implementation, and the engineering behind each project.</p>
-</div><p>3 project stories<br>7 public repositories</p>
+</div><p>2 selected project stories<br>GitHub archive</p>
 </div>
 <article class="feature" id="1dotdev">
 <div class="feature-margin"><span class="eyebrow">01 / AI ASSISTANTS</span><h3 class="project-name">1DotDev</h3><span class="status">Implemented · hardening</span><p class="stack">Node.js / SQLite / WhatsApp Cloud API / Claude</p>
@@ -92,85 +92,19 @@
 </details><a class="source-link" target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/ai-radar">Explore the source ↗</a>
 </div>
 </article>
-<article class="feature" id="drivesuite">
-<div class="feature-margin"><span class="eyebrow">03 / AGENTS & INTEGRATION</span><h3 class="project-name">DriveSuite</h3><span class="status">In development</span><p class="stack">Python / Node.js / SQLite / Docker / MCP scaffold</p>
-</div>
-<div class="feature-content"><h3>One conversation. A connected stack.</h3><p class="feature-lead">A home-media assistant project spanning messaging, service integrations, orchestration, and self-hosted infrastructure.</p>
-<div class="overview">
-<div><h4>The problem</h4><p>Make a collection of media services easier to search and control through a conversational interface.</p>
-</div>
-<div><h4>What I built</h4><p>An earlier WhatsApp bridge and a newer Telegram agent, alongside service wrappers, infrastructure configuration, and architecture documentation.</p>
-</div>
-</div>
-<figure class="project-flow" aria-labelledby="drive-flow-caption"><p class="eyebrow">Current integration path</p>
-<ol class="flow-steps">
-<li><strong>Telegram agent</strong><span>Parse a request and track conversation state.</span>
-</li>
-<li><strong>HTTP wrappers</strong><span>Call service APIs through the current integration code.</span>
-</li>
-<li><strong>Media services</strong><span>Search and manage the connected media stack.</span>
-</li>
-</ol><figcaption id="drive-flow-caption">Architecture overview, not a demonstration of a completed workflow. The MCP client remains a scaffold; the confirmed-action path needs end-to-end completion.</figcaption>
-</figure>
-<details>
-<summary>Engineering notes <span aria-hidden="true">+</span>
-</summary>
-<div class="case-notes"><h4>Decisions</h4><p>Separate the agent, service adapters, infrastructure, and documentation. Keep user confirmation explicit for actions that change service state.</p><h4>Evidence</h4><p>Five public repositories expose the different parts of the system. Direct HTTP integrations and an MCP client scaffold are visible in source.</p><h4>Current limits</h4><p>The newer MCP discovery path is a stub, and the confirmed-action flow still needs end-to-end completion. These repositories should be presented as one evolving system.</p><h4>Next focus</h4><p>Complete and test one path: search → plan → confirm → execute → observe the result.</p>
-</div>
-</details>
-<details class="repo-disclosure">
-<summary>Explore the system <span>5 repositories ↗</span>
-</summary><ul>
-<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/DriveSuite">DriveSuite ↗</a><span>Original WhatsApp implementation</span>
-</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/drivesuite-agent">drivesuite-agent ↗</a><span>Telegram agent · in development</span>
-</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/drivesuite-mcp">drivesuite-mcp ↗</a><span>Service wrappers</span>
-</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/drivesuite-infra">drivesuite-infra ↗</a><span>Infrastructure configuration</span>
-</li>
-<li><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/drivesuite-docs">drivesuite-docs ↗</a><span>Architecture & setup</span>
-</li></ul>
-</details>
-</div>
-</article>
+
 </section>
-<section id="collection" class="archive-section wrap">
-<div class="section-heading">
-<div><p class="eyebrow">02 / THE COLLECTION</p><h2>More independent work.</h2><p class="section-intro">Start with the three stories above, then explore supporting tools, ML experiments, and website source.</p>
-</div><p><span id="repo-total">18 public repositories overall</span><br>Grouped by project</p>
-</div>
-<div class="toolbar">
-<div class="filters" role="group" aria-label="Filter collection"><button disabled data-filter="All" class="selected" aria-pressed="true">All additional projects</button><button disabled data-filter="Tools & apps" aria-pressed="false">Tools & apps</button><button disabled data-filter="ML experiments" aria-pressed="false">ML experiments</button><button disabled data-filter="Websites" aria-pressed="false">Websites</button>
-</div><label class="search"><span aria-hidden="true">⌕</span><input disabled type="search" id="search" aria-label="Search collection" placeholder="Find a project…"></label>
-</div><p class="archive-total" id="count" role="status" aria-live="polite"></p><button id="refresh" class="button" type="button">Refresh from GitHub ↻</button><p class="archive-footnote" id="data-status" role="status" aria-live="polite">Loading the saved collection…</p>
-<div id="archive">
-<article class="archive-row" data-name="chromadb" data-language="Python"><span class="row-category">Tools &amp; apps</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/chromadb">ChromaDB Retrieval <span aria-hidden="true">↗</span></a></h3><p>A document ingestion and retrieval prototype with centroid-based collection routing.</p></div><div class="row-meta"><span class="status">Prototype</span><span>Python</span></div></article>
-<article class="archive-row" data-name="workout" data-language="TypeScript"><span class="row-category">Tools &amp; apps</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/workout">Workout <span aria-hidden="true">↗</span></a></h3><p>An offline-first workout tracker built with React and TypeScript.</p></div><div class="row-meta"><span class="status">Implemented</span><span>TypeScript</span></div></article>
-<article class="archive-row" data-name="alpacabot-dashboard" data-language="HTML"><span class="row-category">Tools &amp; apps</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/alpacabot-dashboard">AlpacaBot Dashboard <span aria-hidden="true">↗</span></a></h3><p>A terminal-style dashboard for a trading-agent project, exploring monitoring and control.</p></div><div class="row-meta"><span class="status">Implemented</span><span>HTML</span></div></article>
-<article class="archive-row" data-name="cricket-excitement-nlp" data-language="Python"><span class="row-category">ML experiments</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/cricket-excitement-nlp">Cricket Excitement NLP <span aria-hidden="true">↗</span></a></h3><p>A classifier exploring match excitement through commentary and match features.</p></div><div class="row-meta"><span class="status">Experiment</span><span>Python</span></div></article>
-<article class="archive-row" data-name="satellite-road-detection" data-language="MATLAB"><span class="row-category">ML experiments</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/satellite-road-detection">Satellite Road Detection <span aria-hidden="true">↗</span></a></h3><p>A classical computer-vision pipeline for road extraction from satellite imagery.</p></div><div class="row-meta"><span class="status">Experiment</span><span>MATLAB</span></div></article>
-<article class="archive-row" data-name="lstm-text-generator" data-language="Jupyter Notebook"><span class="row-category">ML experiments</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/lstm-text-generator">RNN &amp; LSTM Text Generation <span aria-hidden="true">↗</span></a></h3><p>NumPy implementations exploring recurrent networks, LSTMs, and text generation.</p></div><div class="row-meta"><span class="status">Experiment</span><span>Jupyter Notebook</span></div></article>
-<article class="archive-row" data-name="cifar-image-classifier" data-language="Jupyter Notebook"><span class="row-category">ML experiments</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/cifar-image-classifier">CIFAR Image Classification <span aria-hidden="true">↗</span></a></h3><p>A CNN experiment classifying CIFAR-10 images into ten categories.</p></div><div class="row-meta"><span class="status">Experiment</span><span>Jupyter Notebook</span></div></article>
-<article class="archive-row" data-name="cifar-dcgan" data-language="Jupyter Notebook"><span class="row-category">ML experiments</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/cifar-dcgan">CIFAR Image Generation <span aria-hidden="true">↗</span></a></h3><p>An experiment generating CIFAR-10 images with a DCGAN.</p></div><div class="row-meta"><span class="status">Experiment</span><span>Jupyter Notebook</span></div></article>
-<article class="archive-row" data-name="offspring-face-gan" data-language="Jupyter Notebook"><span class="row-category">ML experiments</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/offspring-face-gan">Offspring Face Generator <span aria-hidden="true">↗</span></a></h3><p>An experimental exploration of face synthesis using family photo inputs.</p></div><div class="row-meta"><span class="status">Experiment</span><span>Jupyter Notebook</span></div></article>
-<article class="archive-row" data-name="sarveshk-landing" data-language="HTML"><span class="row-category">Websites</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/sarveshk-landing">sarveshk.dev <span aria-hidden="true">↗</span></a></h3><p>Source for this portfolio and its project collection.</p></div><div class="row-meta"><span class="status">Website source</span><span>HTML</span></div></article>
-<article class="archive-row" data-name="sarveshk-dev" data-language="TypeScript"><span class="row-category">Websites</span><div><h3><a target="_blank" rel="noopener noreferrer" href="https://github.com/sarvesh1karandikar/sarveshk-dev">Résumé Website <span aria-hidden="true">↗</span></a></h3><p>Source for the online résumé and downloadable PDF.</p></div><div class="row-meta"><span class="status">Website source</span><span>TypeScript</span></div></article>
-</div>
-<div id="empty" class="empty" hidden><h3>No matching projects.</h3><p>Try another search or category.</p><button id="reset" class="button">Clear filters ↗</button>
-</div><p class="archive-footnote">The stories above group the five DriveSuite repositories together. The saved collection loads first. Refresh from GitHub when you want the latest public repository list.</p>
-</section>
+<section id="collection" class="archive-section wrap"><span id="drivesuite"></span><div class="section-heading"><div><p class="eyebrow">02 / MORE WORK</p><h2>Explore more on GitHub.</h2><p class="section-intro">Find additional tools, experiments, and source code in the public repositories, including <a href="https://github.com/sarvesh1karandikar/DriveSuite">DriveSuite</a>.</p><a class="button" href="https://github.com/sarvesh1karandikar">Browse GitHub ↗</a></div></div></section>
 <section class="closing wrap">
 <div><p class="eyebrow">03 / THE WIDER PICTURE</p><h2>Independent work.<br>Professional context.</h2><p>Explore my professional experience and the systems I work on beyond these projects.</p>
 </div>
-<div class="closing-links"><a href="../"><span><small>THE PORTFOLIO</small>Professional work</span><b>↗</b></a><a href="../resume/"><span><small>THE EXPERIENCE</small>Read my résumé</span><b>↗</b></a>
+<div class="closing-links"><a href="/work/"><span><small>THE PORTFOLIO</small>Professional work</span><b>↗</b></a><a href="../resume/"><span><small>THE EXPERIENCE</small>Read my résumé</span><b>↗</b></a>
 </div>
 </section>
 </main>
 <footer class="wrap"><a href="../">Sarvesh Karandikar</a><span>Project collection</span><a href="#">Back to top ↑</a>
 </footer>
-<noscript><p class="wrap archive-footnote">The saved collection is available above. Enable JavaScript to search, filter, or refresh it.</p>
-</noscript><script type="module" src="./archive.js"></script><script type="module" src="./demo.js"></script>
+<script type="module" src="./demo.js"></script>
 </body>
 </html>
 
